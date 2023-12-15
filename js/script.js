@@ -41,3 +41,17 @@
 // ulElem.insertAdjacentHTML("beforeend", listContent);
 
 // containet.appendChild(ulElem);
+
+// document.body.addEventListener("keydown", handleKeydown);
+
+// function handleKeydown(events) {
+//   console.log(events);
+// }
+
+// const button = document.querySelector(".my-button");
+
+// const handleClick = () => {
+//   console.log("Button was clicked");
+// };
+
+// button.addEventListener("click", handleClick);
