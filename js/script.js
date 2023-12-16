@@ -124,3 +124,38 @@
   | подія submit (якщо не знаємо скільки інпутів)
   |============================
 */
+
+// const form = document.querySelector(".js-form");
+
+// form.addEventListener("submit", handlerSubmit);
+
+// function handlerSubmit(evt) {
+//   evt.preventDefault();
+
+//   /****** деструктуризація елементів за 'name' ******/
+
+//   const formData = new FormData(evt.currentTarget);
+//   const data = {};
+
+//   formData.forEach((value, key) => (data[key] = value));
+
+//   console.log(data);
+// }
+
+/****** тест ******/
+
+// const form = document.querySelector(".js-form");
+
+// form.addEventListener("submit", handlerSubmit);
+
+// function handlerSubmit(evt) {
+//   console.log(evt);
+// }
+
+// const input = document.querySelector(".js-user-name");
+
+// input.addEventListener("blur", hadlerInput);
+
+// function hadlerInput(evt) {
+//   console.dir(evt.currentTarget.value);
+// }
