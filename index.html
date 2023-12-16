@@ -7,6 +7,35 @@
     <link rel="stylesheet" href="/style.css/style.css" />
   </head>
   <body>
+    <!-- подія input -->
+    <!-- <input type="text" class="js-user-name" /> -->
+
+    <!-- Подія submit -->
+    <form class="js-form feedback-form">
+      <input
+        type="text"
+        name="email"
+        class="form-input"
+        placeholder="Email"
+        required
+      />
+      <input
+        type="password"
+        name="password"
+        class="form-input"
+        placeholder="Password"
+        required
+      />
+      <textarea
+        cols="30"
+        rows="10"
+        name="comment"
+        class="form-textarea"
+        placeholder="Comment"
+      ></textarea>
+      <button class="form-button">Submit</button>
+    </form>
+
     <div id="container"></div>
     <script src="/js/script.js"></script>
   </body>

@@ -55,3 +55,72 @@
 // };
 
 // button.addEventListener("click", handleClick);
+
+/**
+  |============================
+
+  |============================
+*/
+
+// const userName = document.querySelector(".js-user-name");
+// userName.addEventListener("input", hadlerInput);
+
+// function hadlerInput(evt) {
+//   console.log(evt.currentTarget.value);
+// }
+
+/**
+  |============================
+  | подія blur
+  |============================
+*/
+
+// const userName = document.querySelector(".js-user-name");
+// userName.addEventListener("blur", handlerInput);
+
+// function handlerInput(evt) {
+//   console.log(evt.currentTarget.value);
+// }
+
+/**
+  |============================
+  | подія focus
+  |============================
+*/
+
+// const userName = document.querySelector(".js-user-name");
+// userName.addEventListener("focus", handlerInput);
+
+// function handlerInput(evt) {
+//   console.log(evt.currentTarget.value);
+// }
+
+/**
+  |============================
+  | подія submit (якщо знаємо скільки інпутів)
+  |============================
+*/
+
+// const form = document.querySelector(".js-form");
+
+// form.addEventListener("submit", handlerSubmit);
+
+// function handlerSubmit(evt) {
+//   evt.preventDefault();
+
+//   /****** деструктуризація елементів за 'name' ******/
+
+//   const { email, password, comment } = evt.currentTarget.elements;
+
+//   const data = {
+//     userEmail: email.value,
+//     userPassword: password.value,
+//     userComment: comment.value,
+//   };
+// }
+
+/**
+  |============================
+  | подія submit (якщо не знаємо скільки інпутів)
+  |============================
+*/
