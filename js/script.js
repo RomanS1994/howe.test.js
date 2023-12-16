@@ -132,9 +132,8 @@
 // function handlerSubmit(evt) {
 //   evt.preventDefault();
 
-//   /****** деструктуризація елементів за 'name' ******/
-
 //   const formData = new FormData(evt.currentTarget);
+//   console.log(formData);
 //   const data = {};
 
 //   formData.forEach((value, key) => (data[key] = value));
@@ -142,20 +141,39 @@
 //   console.log(data);
 // }
 
-/****** тест ******/
+/**
+  |============================
+  | подія keydown / keyuo ******
+  |============================
+*/
 
-// const form = document.querySelector(".js-form");
-
-// form.addEventListener("submit", handlerSubmit);
-
-// function handlerSubmit(evt) {
-//   console.log(evt);
+// document.addEventListener("keydown", handlerKey);
+// let list = [];
+// function handlerKey(evt) {
+//   console.log(evt.code);
+//   if (evt.code === "KeyD") {
+//     return console.log("😀");
+//   }
+//   console.log("😱");
 // }
 
-// const input = document.querySelector(".js-user-name");
+/****** приклад свіча ******/
 
-// input.addEventListener("blur", hadlerInput);
+// document.addEventListener("keydown", handlerKey);
 
-// function hadlerInput(evt) {
-//   console.dir(evt.currentTarget.value);
+// function handlerKey(evt) {
+//   switch (evt.code) {
+//     case "Escape":
+//       closeModal();
+//   }
+
+//   function closeModal() {
+//     console.log("Modal is close");
+//   }
 // }
+
+/**
+  |============================
+  | обробка комбінацій клавіш
+  |============================
+*/
