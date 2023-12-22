@@ -10,16 +10,16 @@
 //  * 6. помістити ul на сторінку
 //  ******/
 
-// // const containet = document.getElementById("container");
+// const containet = document.getElementById("container");
 
-// // const ulElem = document.createElement("ul");
+// const ulElem = document.createElement("ul");
 
-// // for (const technology of technologies) {
-// //   const liElem = document.createElement("li");
-// //   liElem.textContent = technology;
-// //   ulElem.appendChild(liElem);
-// // }
-// // containet.appendChild(ulElem);
+// for (const technology of technologies) {
+//   const liElem = document.createElement("li");
+//   liElem.textContent = technology;
+//   ulElem.appendChild(liElem);
+// }
+// containet.appendChild(ulElem);
 
 // /**
 //   |============================
@@ -82,12 +82,7 @@
 //   console.log(evt.currentTarget.value);
 // }
 
-/**
-  |============================
-  | подія focus
-  |============================
-*/
-
+/****** подія focus ******/
 // const userName = document.querySelector(".js-user-name");
 // userName.addEventListener("focus", handlerInput);
 
@@ -95,12 +90,7 @@
 //   console.log(evt.currentTarget.value);
 // }
 
-/**
-  |============================
-  | подія submit (якщо знаємо скільки інпутів)
-  |============================
-*/
-
+/******  подія submit (якщо знаємо скільки інпутів)  ******/
 // const form = document.querySelector(".js-form");
 
 // form.addEventListener("submit", handlerSubmit);
@@ -119,19 +109,15 @@
 //   };
 // }
 
-/**
-  |============================
-  | подія submit (якщо не знаємо скільки інпутів)
-  |============================
-*/
-
+/****** подія submit (якщо не знаємо скільки інпутів) ******/
 // const form = document.querySelector(".js-form");
+// console.dir(form);
 
 // form.addEventListener("submit", handlerSubmit);
 
 // function handlerSubmit(evt) {
 //   evt.preventDefault();
-
+//   console.log(evt);
 //   const formData = new FormData(evt.currentTarget);
 //   console.log(formData);
 //   const data = {};
@@ -141,12 +127,7 @@
 //   console.log(data);
 // }
 
-/**
-  |============================
-  | подія keydown / keyuo ******
-  |============================
-*/
-
+/******  подія keydown / keyuo ******/
 // document.addEventListener("keydown", handlerKey);
 // let list = [];
 // function handlerKey(evt) {
@@ -158,7 +139,6 @@
 // }
 
 /****** приклад свіча ******/
-
 // document.addEventListener("keydown", handlerKey);
 
 // function handlerKey(evt) {
@@ -172,8 +152,73 @@
 //   }
 // }
 
-/**
-  |============================
-  | обробка комбінацій клавіш
-  |============================
-*/
+/****** обробка комбінацій клавіш ******/
+// document.body.addEventListener("click", handlerClick);
+// function handlerClick({ target }) {
+//   console.log(target.value);
+//   console.log(e.currentTarget);
+// }
+
+/****** прототип обєкта ******/
+
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = "Манго";
+
+// console.log(dog); // { name: 'Манго', __proto__: animal }
+// console.log(animal.isPrototypeOf(dog)); // true
+
+/****** прототипне наслідування ******/
+// const user = {
+//   name: "Alice",
+//   age: 23,
+//   sayHallo() {
+//     console.log(`Hello my name is ${this.name}`);
+//   },
+//   getAge() {
+//     console.log(`My age ${this.age}`);
+//   },
+// };
+
+// const student = Object.create(user);
+// student.name = "Michel";
+// student.age = "25";
+// student.sayHallo();
+// student.getAge();
+
+// const teacher = Object.create(student);
+// teacher.name = "Roman";
+// teacher.age = 29;
+// teacher.sayHallo();
+// teacher.getAge();
+
+// console.log(teacher);
+/****** повтор прототипа ******/
+// const cars = {
+//   names: "bmw",
+//   years: 2000,
+//   namesOfCar() {
+//     console.log(`Name of thi car is ${this.names}`);
+//   },
+//   oldYears() {
+//     console.log(`This cars have ${this.years} years`);
+//   },
+// };
+
+// const audi = Object.create(cars);
+// audi.names = "Audi";
+// audi.years = "2014";
+// audi.namesOfCar();
+// audi.oldYears();
+
+/****** Оператор continue ******/
+// for (let i = 0; i <= 5; i++) {
+//   if (i <= 2) {
+//     continue; // Переходить до наступної ітерації, пропускаючи решту тіла циклу для i === 2
+//   }
+//   console.log(i);
+// }
+
+/****** metod bind ******/
