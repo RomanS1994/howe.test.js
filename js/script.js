@@ -235,20 +235,20 @@
 // const boundGetX = unboundGetX.bind(obj);
 // console.log(boundGetX()); // 10, контекст визначений через bind
 
-const customers = {
-  firstName: "Jacob",
-  lastName: "Marcel",
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-};
-function makeMessage(callback) {
-  console.log(`Обробляємо заявку від ${callback()}`);
-}
+// const customers = {
+//   firstName: "Jacob",
+//   lastName: "Marcel",
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+// function makeMessage(callback) {
+//   console.log(`Обробляємо заявку від ${callback()}`);
+// }
 
-makeMessage(customers.getFullName.bind(customers));
+// makeMessage(customers.getFullName.bind(customers));
 
-/******  ******/
+/****** metod bind ******/
 
 // const customer = {
 //   firstName: "Jacob",
@@ -260,3 +260,14 @@ makeMessage(customers.getFullName.bind(customers));
 
 // // makeMessage(customers.getFullName);
 // makeMessage(customer.getFullName.bind(customer));
+
+/******  ******/
+class Car {
+  // Change code below this line
+  constructor(brand, model, price) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+  // Change code above this line
+}
