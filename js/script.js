@@ -222,3 +222,41 @@
 // }
 
 /****** metod bind ******/
+// const obj = {
+//   x: 10,
+//   getX: function () {
+//     return this.x;
+//   },
+// };
+
+// const unboundGetX = obj.getX;
+// console.log(unboundGetX()); // undefined, так як контекст не визначений
+
+// const boundGetX = unboundGetX.bind(obj);
+// console.log(boundGetX()); // 10, контекст визначений через bind
+
+const customers = {
+  firstName: "Jacob",
+  lastName: "Marcel",
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
+function makeMessage(callback) {
+  console.log(`Обробляємо заявку від ${callback()}`);
+}
+
+makeMessage(customers.getFullName.bind(customers));
+
+/******  ******/
+
+// const customer = {
+//   firstName: "Jacob",
+//   lastName: "Marcel",
+// };
+// function makeMessage(callback) {
+//   console.log(`Обробляємо заявку від ${callback}`);
+// }
+
+// // makeMessage(customers.getFullName);
+// makeMessage(customer.getFullName.bind(customer));
